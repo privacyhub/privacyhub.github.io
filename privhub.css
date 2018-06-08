@@ -1,0 +1,14 @@
+<style>
+
+body {
+  background: url(web-background.png) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+}
+
+.navbar {
+  background-color: transparent;
+  border: 0;
+}
+
+</style>

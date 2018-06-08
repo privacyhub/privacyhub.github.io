@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang=en>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title> Markup Testing </title>
+</head>
+
+<body>
+  <h1> <mark id="dynhigh" class="mark3" style="background-color: blue;"> Testing </mark> </h1>
+  <button id="run" type="submit" class="btn btn-success btn-large"> Change </button>
+</body>
+
+<script>
+  document.getElementById('run').addEventListener('click', function(){
+    var x = document.getElementsByClassName('mark3');
+    for (var i=0; i<x.length; i++){
+      x[i].style.backgroundColor = "white";
+    }
+  });
+</script>
+
+</html>

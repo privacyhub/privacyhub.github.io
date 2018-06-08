@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang=en>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="responsive-full-background-image.css">
+
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title> Privacy Hub Demo </title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <h1 style="color: white;"> 
+        This is a Demo! 
+        <button type="submit" class="btn btn-success btn-large" onclick="demofn()"> Run </button>
+      </h1> 
+<!--
+      <div class="row">
+        <div class="col-xs-offset-6 col-xs-6">
+          <div class="box">
+            <iframe id="demo" src="g2.html" width="800" height="400" scrolling="yes"></iframe>
+          </div>
+        </div>
+      </div>
+-->
+
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="summary" style="display: none;">
+            <h2 style="color: cyan;"><strong> Information Collected: </strong></h2>
+            <ul>
+              <li> <strong> Personal Identity </strong> </li>
+              <ul>
+                <li> Name </li>
+                <li> Photo </li>
+                <li> Email address </li>
+                <li> Phone number </li>
+                <li> Speaking Language </li>
+              </ul>
+
+              <li> <strong> Biological Identity </strong> </li>
+              <ul>
+                <li> Face </li>
+              </ul>
+
+              <li> <strong> Financial </strong> </li>
+              <ul>
+                <li> Credit card </li>
+              </ul>
+
+              <li> <strong> Social Contacts </strong> </li>
+              <ul>
+                <li> Related people </li>
+              </ul>
+
+              <li> <strong> Device Information </strong> </li>
+              <ul>
+                <li> Hardware model </li>
+                <li> Operating System version </li>
+                <li> Unique device identifiers </li>
+                <li> Mobile network information </li>
+              </ul>
+
+              <li> <strong> Behavioral Preference </strong> </li>
+              <ul>
+                <li> Ads found useful </li>
+                <li> Favorable YouTube videos </li>
+                <li> Services usage </li>
+                <li> Ads and content accessed </li>
+                <li> Location </li>
+              </ul>
+
+              <li> <strong> Log History </strong> </li>
+              <ul>
+                <li> Search queries </li>
+                <li> Website visited </li>
+                <li> Phone log </li>
+                <li> SMS routing </li>
+                <li> IP address </li>
+                <li> Device events, crashes, system activity </li>
+                <li> Hardware settings </li>
+                <li> Browser type </li>
+                <li> Browser language </li>
+                <li> Time log of request and referral URL </li>
+                <li> Cookies </li>
+                <li> Services installation and unique application numbers </li>
+                <li> Local storage </li>
+                <li> Browser web storage </li>
+                <li> Application data caches </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="summary" style="display: none;">
+            <h2 style="color: cyan;"><strong> Information Shared: </strong></h2>
+            <ul>
+              <li> <strong> Personal Identity </strong> </li>
+              <ul>
+                <li> Name </li>
+                <li> Photo </li>
+              </ul>
+
+              <li> <strong> Behavioral Preference </strong> </li>
+              <ul>
+                <li> Services usage and actions</li>
+                <li> Written review and comments </li>
+                <li> Like </li>
+              </ul>
+            </ul>
+
+            <h2 style="color: cyan;"><strong> Data Shared with: </strong></h2>
+            <ul>
+              <li> <strong> Full Leak and Access: </strong> </li>
+              <ul>
+                <li> Domain Administrators </li>
+                <li> Legal and Government </li>
+                <li> External companies and organizations for legal and security assistance </li>
+              </ul>
+
+              <li> <strong> Instructed Leak: </strong> </li>
+              <ul>
+                <li> Affiliates </li>
+                <li> Trusted Businesses or Persons </li>
+              </ul>
+
+              <li> <strong> Non-personal Identifiable Information </strong> </li>
+              <ul>
+                <li> Business Partners </li>
+                <li> Publishers </li>
+                <li> Advertisers </li>
+                <li> Connected Sites </li>
+              </ul>
+            </ul>
+
+            <h2 style="color: cyan;"><strong> Data Preservation and Control: </strong></h2>
+            <ul>
+              <li> <strong> Location </strong> </li>
+              <ul>
+                <li> Stored globally </li>
+              </ul>
+
+              <li> <strong> Delete Options </strong> </li>
+              <ul>
+                <li> Residual Copies not deleted from active servers and backup systems. </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="box">
+            <iframe id="demo2" src="g4.html" width="800" height="800" scrolling="yes"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+<script>
+  var k=0;
+  function demofn() {
+    var x = document.getElementsByClassName("summary");
+
+    for (var i=0; i < x.length; i++) {
+      x[i].style.display = "block";
+    }
+
+    var iw = document.getElementById("demo2").contentWindow;
+
+    iw.postMessage(k, "*");
+
+    k++;
+  }
+</script>
+
+</html>
