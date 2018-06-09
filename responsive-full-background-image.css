@@ -33,7 +33,7 @@ body {
   body {
     /* The file size of this background image is 93% smaller
      * to improve page load speed on mobile internet connections */
-    background-image: url(images/background-photo-mobile-devices.jpg);
+    background-image: url(images/privacyHub_splash_bg.jpg);
   }
 }
 
@@ -50,7 +50,7 @@ body {
 .jumbotron {
   background-color: transparent;
   font-weight: bold;
-  color: yellow;
+  color: black;
   font-size: large;
 }
 
